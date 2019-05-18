@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="screenBackground">#FFEE58</color>
+    <color name="textViewBackground">#FFFFFF</color>
+    <color name="counterColor">#00FFFC</color>
+    <color name="cyan">#0FEDCE</color>
+    <color name="cyanV2">#26C6DA</color>
+    <!--
+    <color name="">#</color>
+    -->
+    <color name="coolblue">#123456</color>
+    <color name="brown">#654321</color>
+    <color name="button_background">#BBDEFB</color>
+    <color name="blueshade">#2196F3</color>
+    <color name="gray">#A49998</color>
+    <color name="black">#000000</color>
+    <color name="pink">#EC12B0</color>
+    <color name="orange">#E19519</color>
+    <color name="red">#E1191C</color>
+    <color name="green">#64E119</color>
+    <color name="lightgreen">#64EEEE</color>
+    <color name="blue">#2719E1</color>
+    <color name="yellow">#E4E119</color>
+    <color name="purple">#9263F4</color>
+    <color name="purple2">#91A1F4</color>
+    <color name="grayish">#9BABAB</color>
+    <color name="eggshell">#FFFFDD</color>
+    <color name="eggshell2">#FFFEEE</color>
+    <color name="eggshell3">#FFFFFE</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Main color for the entire app -->
+    <color name="main_red">#F6233B</color>
+    <color name="second_red">#F41A20</color>
+
+
+    <!--    Hungry colors   -->
+    <color name="mcdonalds_yellow">#FFD114</color>
+    <color name="mcy2">#FFCD00</color>
+
+</resources>

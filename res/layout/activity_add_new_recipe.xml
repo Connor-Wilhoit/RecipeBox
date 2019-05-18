@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/eggshell3"
+    android:fillViewport="true"
+    tools:context=".AddNewRecipeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/eggshell3"
+        tools:context=".AddNewRecipeActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar_abl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/action_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+        <!--	Pair [1] : Recipe Label  -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/recipe_label_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="@string/recipe_label_edit"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar_abl"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.01" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/recipe_label_tiet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--	Pair [2] : Ingredients -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ingredients_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="@string/ingredients_edit_text_str"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recipe_label_til" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ingredients_tiet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textImeMultiLine"
+                android:singleLine="false" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--	Pair [3] : Cooking Instructions	-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/instructions_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/instructions_edit_text_str"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ingredients_til" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/instructions_tiet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textImeMultiLine" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--	Pair [4] : Category	-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/category_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="@string/category_str"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instructions_til" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/category_tiet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />            
+        </com.google.android.material.textfield.TextInputLayout>
+            
+
+        <!--	Pair [5] : Notes	-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/notes_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="@string/notes_edit_text_str"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/category_til" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/notes_tiet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textImeMultiLine" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <!--    This LinearLayout is basically a hack; I need to keep all
+                of the TextInputLayouts together, and evenly-spaced-apart,
+                yet have found no other way (apart from this hack), to do so
+                while keeping the bottom-most view-object the same distance
+                apart...
+                Future Work: Use a better method of handling the bottom-most
+                view-object's relation to the other views and the Bottom-Nav-
+                View, evenly spaced.
+        -->
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notes_til"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_nav_view">
+        </LinearLayout>
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:menu="@menu/bottom_navigation_bar_addrecipe" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

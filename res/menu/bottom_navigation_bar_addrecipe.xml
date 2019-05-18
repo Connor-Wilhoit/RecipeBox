@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/navbar_home_title"
+        />
+
+    <item
+        android:id="@+id/add_recipe_menu_photo"
+        android:icon="@drawable/baseline_add_a_photo_black_24dp"
+        android:title="@string/navbar_add_recipe_photo"
+        />
+
+    <item
+        android:id="@+id/nav_save_recipe"
+        android:icon="@drawable/ic_save_black_24dp"
+        android:title="@string/save_recipe_button_str"
+        />
+
+</menu>

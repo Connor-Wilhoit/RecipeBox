@@ -1,0 +1,152 @@
+<resources>
+    <string name="app_name">RecipeBox2.0</string>
+
+     <string name="fetch_text">Fetch</string>
+     <string name="clear_text">Clear</string>
+     <string name="connection_error">Connection error.</string>
+     <string name="fetch_cancelled">Fetch cancelled.</string>
+     <string name="network_hint">Networking 101</string>
+
+    <!--    Here are some debugging/placeholder strings,
+                currently to be used from within:
+                    "activity_simple_photo.xml"
+                  for debugging the Android filesystem, and
+                  how I want to display, and therefore retrieve,
+                  images non-internally
+      -->
+    <string name="debug_str">Empty</string>
+    <string name="debug_str2">Empty2</string>
+    <string name="debug_str3">Empty3</string>
+    <string name="debug_str_multiline">Multiline</string>
+
+     <string name="filename_str">Filename</string>
+
+    <!-- Toolbar-specific strings here (Bottom Nav Bar on MainActivity)  -->
+    <string name="bottom_toolbar">Bottom Toolbar</string>
+    <string name="navbar_home_title">Home</string>
+    <string name="navbar_dashboard">Dashboard</string>
+    <string name="navbar_notifications">Notifications</string>
+    <string name="navbar_add_new_recipe">Add Recipe</string>
+    <string name="navbar_add_recipe_photo">Take Photo</string>
+
+
+    <!--  Strings for all of the main buttons on the home screen
+          (Everything above the Bottom Nav Bar)
+    -->
+    <string name="new_recipe_str">Add New Recipe</string>
+    <string name="my_recipes_str">My Recipes</string>
+    <string name="diet_section_str">Diet/Lifestyle</string>
+    <string name="grocery_list_str">Grocery List</string>
+
+
+    <!-- Strings for all things located in the 'activity_add_new_recipe' layout file -->
+    <string name="recipe_name_str">Recipe Name</string>
+    <string name="take_photo_str">Take Photo</string>
+    <string name="take_picture">Take Picture</string>
+    <!-- Pair #1: -->
+    <string name="recipe_label_str">Recipe Label:</string>
+    <string name="recipe_label_edit">Enter Recipe Name</string>
+    <!-- Pair #2: (actually a TextView + Spinner, which a drop-down menu Container  -->
+    <string name="recipe_category_text_view_str">Category:</string>
+    <!-- Spinners utilize arrays of strings, as follows: -->
+    <string name="category_str">Main</string>
+    <string-array name="recipe_category_spinner_array">
+        <item>Main</item>
+        <item>Side</item>
+        <item>Appetizer</item>
+        <item>Dessert</item>
+        <item>Veggie</item>
+        <item>Snack</item>
+        <item>Drink</item>
+        <item>Other</item>
+        <!-- Here I will add all the various diet-type categories,
+             but for now I just want the most general categories of
+             dishes.
+        <item>Low-Calorie</item>
+        <item>Low-Carbohydrate</item>
+        <item>Low-Fat</item>
+        -->
+    </string-array>
+
+    <!-- Pair #3: Ingredients for recipe (TextView + EditText) -->
+    <string name="ingredients_text_view_str">Ingredients:</string>
+    <string name="ingredients_edit_text_str">Enter Ingredients</string>
+
+    <!-- Pair #4: Instructions for creating the recipe (TextView + EditText)  -->
+    <string name="instructions_text_view_str">Instructions:</string>
+    <string name="instructions_edit_text_str">Enter Cooking Instructions</string>
+
+    <!-- Pair #5: Notes for the recipe (TextView + EditText)  -->
+    <string name="notes_text_view_str">Notes:</string>
+    <string name="notes_edit_text_str">Enter Notes</string>
+
+
+    <!-- Here is the string value for the submit(save) recipe button in the
+         AddNewRecipeActivity, Activity
+    -->
+    <string name="save_recipe_button_str">Save Recipe</string>
+
+    <!--   Here are the strings for the 'MyRecipesActivity -
+           Bottom Nav View', menu-bar
+    -->
+    <string name="navbar_recipes_images_title">Recipe Images</string>
+
+    <!--   Here are the string(s) for the 'DietLifestyleActivity -
+           Bottom Nav View', menu-bar
+    -->
+    <string name="navbar_diet_lifestyle_example">Temp</string>
+
+    <!--  Here are the strings for the 'GroceryListActivity -
+          Bottom Nav View', menu-bar
+    -->
+    <string name="navbar_grocery_list_new_list">New List</string>
+    <string name="navbar_grocery_list_coupons">Coupons</string>
+
+    <!--	Here are the strings for use in "MyRecipesActivity";
+            specifically for displaying the recipe images
+    -->
+    <string name="recipe_imageview_1">Recipe #1</string>
+    <string name="recipe_textview_1">Recipe #1</string>
+    <string name="recipe_imageview_2">Recipe #2</string>
+    <string name="recipe_textview_2">Recipe #2</string>
+
+    <!--	Here are the strings for use in the
+         "bottom_navigation_bar_view_recipe.xml"'s  BottomNav View
+    -->
+    <string name="navbar_go_home">Home</string>
+    <string name="navbar_modify_recipe_name">Save New Recipe Name</string>
+
+    <!-- Here are the strings for the "activity_glide_view_image.xml" layout file -->
+    <string name="recipe_image_descripton">Current Recipe Image</string>
+
+
+    <!-- Here are the strings for use in "GlideViewImageActivity.java";
+         primarily for displaying the recipe fields
+    -->
+    <string name="recipe_ingredients">Ingredients</string>
+    <string name="recipe_label">Recipe Label</string>
+    <string name="recipe_instructions">Recipe Instructions</string>
+    <string name="recipe_instructionsv2">Preparation</string>
+    <string name="recipe_category">Category</string>
+    <string name="recipe_notes">Notes</string>
+
+	<string name="simple_str">Add Simple Recipe</string>
+
+    <!--    Here are the strings for use in TakePhotoActivity.java  -->
+    <string name="imageview_str">Resultant Image</string>
+
+    <!--    Here are the strings for use in SimplePhotoActivity.java    -->
+    <string name="image_button_str">Take Photo</string>
+    <string name="catstr">Category</string>
+
+    <!--	Here are the strings for use in DietLifestyleActivity.java		-->
+    <string name="keto_tv_str">Keto Recipes</string>
+    <string name="vegan_tv_str">Vegan</string>
+    <string name="paleo_tv_str">Paleo</string>
+    <string name="vegetarian_tv_str">Vegetarian</string>
+    <string name="pescatarian_tv_str">Pescatarian</string>
+    <string name="carnivore_tv_str">Carnivore</string>
+    <string name="highcarb_tv_str">High-Carb</string>
+    <string name="mixed_tv_str">Mixed</string>
+
+</resources>

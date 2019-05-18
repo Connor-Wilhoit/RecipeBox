@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/eggshell3"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/eggshell3"
+        tools:context=".MainActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar_abl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/action_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <!--		[1] Diet/Lifestyle		-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/diet_lifestyle_llc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="100dp"
+            android:layout_gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar_abl">
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/diet_lifestyle_acib"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@drawable/diet_button_image"
+                android:contentDescription="@string/diet_section_str" />
+            <TextView
+                android:id="@+id/diet_lifestyle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                
+                android:text="@string/diet_section_str" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <!--		[2] Grocery List		-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/grocery_list_llc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="100dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/diet_lifestyle_llc">
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/grocery_list_acib"
+                android:background="@drawable/rb11"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:contentDescription="@string/grocery_list_str" />
+            <TextView
+                android:id="@+id/grocery_list_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+
+                android:text="@string/grocery_list_str" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <!--		[3] Add New Recipe		-->
+		<androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/new_recipe_llc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="100dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/grocery_list_llc">
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/new_recipe_acib"
+                android:background="@drawable/ic_library_add_black_48dp"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:contentDescription="@string/new_recipe_str" />
+            <TextView
+                android:id="@+id/new_recipe_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+
+                android:text="@string/new_recipe_str" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <!--		[4] My Recipes		-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/my_recipes_llc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="100dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/new_recipe_llc">
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/my_recipes_acib"
+                android:background="@drawable/ic_collections_black_48dp"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:contentDescription="@string/my_recipes_str" />
+            <TextView
+                android:id="@+id/my_recipes_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+
+                android:text="@string/my_recipes_str" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <!--       [5] Simple Photo Activity              -->
+		<androidx.appcompat.widget.LinearLayoutCompat
+				android:id="@+id/simple_photo_llc"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="100dp"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/my_recipes_llc">
+			<androidx.appcompat.widget.AppCompatImageButton
+				android:id="@+id/simple_photo_acib"
+				android:layout_width="wrap_content"
+				android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+				android:background="@drawable/baseline_add_a_photo_black_24dp"
+				android:contentDescription="@string/simple_str" />
+			<TextView
+				android:id="@+id/simple_photo_tv"
+				android:layout_width="wrap_content"
+				android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+
+				android:text="@string/simple_str" />
+			</androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+        <!-- This is the hack used throughout the entire application.....
+                Find a better implementation in the future!         -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/hacked_llc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+			android:layout_margin="100dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/simple_photo_llc"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_nav_view">
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+			android:layout_gravity="bottom"
+            android:background="@color/white"
+			app:layout_constraintBottom_toBottomOf="parent"
+            app:menu="@menu/bottom_navigation_bar_main" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

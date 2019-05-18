@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/navbar_home_title"
+        />
+
+    <item
+        android:id="@+id/nav_recipe_images"
+        android:icon="@drawable/baseline_perm_media_black_24dp"
+        android:title="@string/navbar_recipes_images_title"
+        />
+
+</menu>

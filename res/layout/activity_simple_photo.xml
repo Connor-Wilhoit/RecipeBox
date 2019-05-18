@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/eggshell3"
+    tools:context=".SimplePhotoActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_abl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/imageview_str"
+        app:layout_constraintEnd_toEndOf="@+id/appbar_abl"
+        app:layout_constraintStart_toStartOf="@+id/appbar_abl"
+        app:layout_constraintTop_toBottomOf="@+id/appbar_abl" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/image_button"
+        android:layout_marginTop="40dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/image_button_str"
+        app:layout_constraintStart_toStartOf="@+id/imageview"
+        app:layout_constraintEnd_toEndOf="@id/imageview"
+        app:layout_constraintTop_toBottomOf="@+id/imageview" />
+
+
+    <TextView
+        android:id="@+id/filesystem_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/debug_str"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@+id/image_button"
+        app:layout_constraintEnd_toEndOf="@+id/image_button"
+        app:layout_constraintTop_toBottomOf="@+id/image_button"  />
+
+    <TextView
+        android:id="@+id/filesystem_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/debug_str2"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/filesystem_tv1"
+        app:layout_constraintStart_toStartOf="@id/filesystem_tv1"
+        app:layout_constraintEnd_toEndOf="@id/filesystem_tv1"  />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/filesystem_tv3"
+        android:text="@string/debug_str3"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/filesystem_tv2"
+        app:layout_constraintStart_toStartOf="@id/filesystem_tv2"
+        app:layout_constraintEnd_toEndOf="@id/filesystem_tv2"  />
+
+
+    <!--
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/debug_til"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="@id/filesystem_tv3"
+        app:layout_constraintEnd_toEndOf="@id/filesystem_tv3"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_view"
+        app:layout_constraintTop_toBottomOf="@+id/filesystem_tv3" >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/debug_tiet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style='style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"'
+            android:inputType="textMultiLine"
+            android:hint="@string/debug_str_multiline"  />
+    </com.google.android.material.textfield.TextInputLayout>
+    -->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_navigation_bar_generic" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
